@@ -1,0 +1,37 @@
+{% extends 'home.html' %}
+
+
+{% block content %}
+
+
+            <h1>Service Form</h1>
+            <form method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="name">Service Name:</label>
+                  <input type="text" class="form-control" name="name" id="name" required>
+                  <div class="invalid-feedback">
+                    Please enter a service name.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="description">Service Description:</label>
+                  <textarea class="form-control" name="description" id="description" required></textarea>
+                  <div class="invalid-feedback">
+                    Please enter a service description.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="image">Service Image:</label>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" name="image" id="image" accept="image/*" required>
+                    <label class="custom-file-label" for="image">Choose file</label>
+                    <div class="invalid-feedback">
+                      Please choose a service image.
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        
+{% endblock content %}  
