@@ -141,5 +141,5 @@ CACHES = {
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://web-production-c4d4.up.railway.app/'
+    'https://web-production-c4d4.up.railway.app'
 ]
